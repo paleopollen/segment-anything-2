@@ -12,6 +12,17 @@
 
 ![SA-V dataset](assets/sa_v_dataset.jpg?raw=true)
 
+## Installing Dependencies on NCSA Delta (Python 3.11)
+
+```bash
+module load anaconda3_gpu/23.9.0
+module load cuda/12.2.1
+
+conda create -n sam2 python=3.11
+source activate sam2
+conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 pytorch-cuda=12.1 -c pytorch -c nvidia
+```
+
 ## Installation
 
 SAM 2 needs to be installed first before use. The code requires `python>=3.10`, as well as `torch>=2.3.1` and `torchvision>=0.18.1`. Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install both PyTorch and TorchVision dependencies. You can install SAM 2 on a GPU machine using:
